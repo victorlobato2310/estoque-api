@@ -3,10 +3,10 @@ import EstoqueController from '../controllers/EstoqueController';
 
 const estoqueRouter = express.Router();
 
-estoqueRouter.post('/estoque/produtos/api/v1', EstoqueController.salvar);
-estoqueRouter.get('/estoque/produtos/api/v1', EstoqueController.obterTodos);
-estoqueRouter.get('/estoque/produtos/api/v1/pesquisa', EstoqueController.obterPorId);
-estoqueRouter.delete('/estoque/produtos/api/v1/', EstoqueController.deletarPorId);
-estoqueRouter.put('/estoque/produtos/api/v1/', EstoqueController.alterar);
+estoqueRouter.post('/', EstoqueController.salvar);
+estoqueRouter.get('/', EstoqueController.obterTodos);
+estoqueRouter.get('/pesquisa', EstoqueController.obterPorId);
+estoqueRouter.delete('/', EstoqueController.deletarPorId);
+estoqueRouter.put('/', EstoqueController.alterar);
 
 export default estoqueRouter;

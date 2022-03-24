@@ -7,6 +7,12 @@ const OPTIONS_MONGOOSE = {
     autoCreate: true
 };
 
+export const CONFIG_JWT = {
+    expireTime: 3600,
+    issuer: 'victorIssuer',
+    secret: 'superencryptedsecret'
+};
+
 export const conn = async (): Promise<Mongoose> =>  await mongoose.connect(DATABASE_CONN, OPTIONS_MONGOOSE);
 
 conn().then(() => {
