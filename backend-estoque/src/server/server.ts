@@ -6,7 +6,6 @@ import usuarioRouter from '../routes/usuario.routes';
 const app = express();
 app.use(express.json());
 
-
 app.use('/estoque/produtos/api/v1', estoqueRouter);
 app.use('/usuarios', usuarioRouter);
 

@@ -48,8 +48,8 @@ const registrar = (req: Request, res: Response, next: NextFunction) => {
 const fazerLogin = (req: Request, res: Response, next: NextFunction) => {
    
     const { usuario, senha } = req.body;
-    // usuario = "kelly";
-     // senha = "kelly123";
+    //usuario = "kelly";
+    //senha = "kelly123";
     //console.log({ usuario, senha});
     Usuario.find({ usuario })
         .exec()
