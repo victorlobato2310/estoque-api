@@ -7,15 +7,17 @@ import cors from 'cors';
 const app = express();
 app.use(express.json());
 
-app.use('/estoque/produtos/api/v1', estoqueRouter);
-app.use('/usuarios', usuarioRouter);
-
-app.use(conn);
-
 const allowedOrigins = ["http://localhost:4200"];
 const options: cors.CorsOptions = {
   origin: allowedOrigins,
 };
+
+app.use(cors(options));
+
+app.use('/estoque/api/v1/produtos', estoqueRouter);
+app.use('/estoque/api/v1/usuarios', usuarioRouter);
+
+app.use(conn);
 
 app.listen(3000, ()=> {
     console.log('Está rodando.');
